@@ -16,15 +16,15 @@ form.addEventListener('submit', async (e) => {
   try {
     resultado.innerHTML = 'Carregando...';
 
-    // Corrigido aqui: lang=pt (não pt_br)
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cidade)}&appid=${API_KEY}&units=metric&lang=pt`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cidade)}&appid=${API_KEY}&units=metric&lang=pt_br`;
     const resposta = await fetch(url);
+    const dados = await resposta.json();
 
-    if (!resposta.ok) {
-      throw new Error('Cidade não encontrada.');
+    // Validação correta para erro da API
+    if (dados.cod && dados.cod !== 200) {
+      throw new Error(dados.message || 'Cidade não encontrada.');
     }
 
-    const dados = await resposta.json();
     mostrarClima(dados);
   } catch (error) {
     mostrarErro(error.message);
