@@ -2,7 +2,7 @@ const form = document.getElementById('form-clima');
 const inputCidade = document.getElementById('cidade');
 const resultado = document.getElementById('resultado');
 
-const API_KEY = 'SUA_API_KEY_AQUI'; // Substitua pela sua chave da OpenWeatherMap
+const API_KEY = 'ae9f2530f129250f57d8083b59bdf45d'; // Substitua pela sua chave da OpenWeatherMap
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
