@@ -16,7 +16,8 @@ form.addEventListener('submit', async (e) => {
   try {
     resultado.innerHTML = 'Carregando...';
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cidade)}&appid=${API_KEY}&units=metric&lang=pt_br`;
+    // Corrigido aqui: lang=pt (não pt_br)
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cidade)}&appid=${API_KEY}&units=metric&lang=pt`;
     const resposta = await fetch(url);
 
     if (!resposta.ok) {
@@ -56,4 +57,3 @@ function mostrarClima(dados) {
 function mostrarErro(msg) {
   resultado.innerHTML = `<p class="error-message">${msg}</p>`;
 }
-
