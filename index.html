@@ -2,39 +2,21 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WeatherBee! 🐝☀️ - Consulta de Clima</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeatherBee - Previsão do Tempo</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>WeatherBee! 🐝☀️</h1>
-      <p class="subtitulo">Descubra agora o clima da sua cidade</p>
-    </header>
-
-    <main>
-      <div class="busca">
-        <input type="text" id="cidade" placeholder="Digite o nome da cidade" />
-        <button onclick="buscarClima()">Buscar</button>
-      </div>
-
-      <div id="resultado" class="card-clima hidden">
-        <h2 id="cidade-nome"></h2>
-        <img id="icone" src="" alt="Ícone do Clima" />
-        <p id="descricao"></p>
-        <p><strong>Temperatura:</strong> <span id="temp"></span>°C</p>
-        <p><strong>Umidade:</strong> <span id="umidade"></span>%</p>
-      </div>
-    </main>
-
-    <footer>
-      <p>Feito por <a href="https://github.com/Abelha09" target="_blank">Bárbara Abelha</a></p>
-    </footer>
+    <h1>WeatherBee 🐝</h1>
+    <form id="form-clima">
+      <input type="text" id="cidade" placeholder="Digite a cidade..." autocomplete="off" />
+      <button type="submit">Buscar</button>
+    </form>
+    <div id="resultado"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
