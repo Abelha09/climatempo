@@ -1,1 +1,139 @@
+/* Fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  background: #ffffffdd;
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+form {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #a8edea;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #ff6f91;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #ff6f91;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 111, 145, 0.4);
+}
+
+button:hover {
+  background-color: #ff4b6e;
+  box-shadow: 0 6px 15px rgba(255, 75, 110, 0.6);
+}
+
+.weather-card {
+  margin-top: 25px;
+  background: #fefefe;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  animation: slideUp 0.6s ease forwards;
+}
+
+.weather-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.weather-card p {
+  font-size: 1.1rem;
+  margin: 6px 0;
+  color: #555;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+  display: block;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.error-message {
+  margin-top: 20px;
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  button, input[type="text"] {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+}
 
